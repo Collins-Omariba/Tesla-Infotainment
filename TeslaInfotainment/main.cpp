@@ -1,5 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <controllers/System.h>
+#include <QQmlContext>
 
 int main(int argc, char *argv[])
 {
@@ -9,10 +11,14 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    System m_systemHandler;
+
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/qt/qml/teslainfotainment/main.qml")));
     if (engine.rootObjects().isEmpty())
         return -1;
 
-    return app.exec();
+    QQmlContext * context ( engine.rootContext() );
+    context->setContextProperty("systemHandler", &m_systemHandler);
+    return app.exec(    );
 }
