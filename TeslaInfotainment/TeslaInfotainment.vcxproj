@@ -37,13 +37,13 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.7.2_msvc2019_64</QtInstall>
-    <QtModules>quick</QtModules>
+    <QtModules>quick;core</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
     <QtQMLDebugEnable>true</QtQMLDebugEnable>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
     <QtInstall>6.7.2_msvc2019_64</QtInstall>
-    <QtModules>quick</QtModules>
+    <QtModules>quick;core</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -97,6 +97,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="controllers\System.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="ui\BottomBar\BottomBar.qml" />
     <None Include="ui\LeftScreen\LeftScreen.qml" />
@@ -106,7 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="ui\assets\car-icon.png" />
+    <Image Include="ui\assets\secured-lock.png" />
+    <Image Include="ui\assets\secured-unlock.png" />
     <Image Include="ui\assets\tesla-cybertruck.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="controllers\System.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
