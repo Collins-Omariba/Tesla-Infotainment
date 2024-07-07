@@ -6,5 +6,7 @@
         <file>ui/LeftScreen/LeftScreen.qml</file>
         <file>ui/assets/tesla-cybertruck.jpg</file>
         <file>ui/assets/car-icon.png</file>
+        <file>ui/assets/secured-lock.png</file>
+        <file>ui/assets/secured-unlock.png</file>
     </qresource>
 </RCC>
