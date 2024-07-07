@@ -13,12 +13,12 @@ public:
 	System(QObject *parent = nullptr);
 	~System();
     bool carLocked() const;
-    void setCarLocked(bool newCarLocked);
+    Q_INVOKABLE void setCarLocked(bool newCarLocked);
     int outDoorTemp() const;
     void setOutDoorTemp(int newOutDoorTemp);
 
     QString userName() const;
-    void setuserName(const QString &newUserName);
+    Q_INVOKABLE void setuserName(const QString &newUserName);
 
 signals:
     void carLockedChanged();

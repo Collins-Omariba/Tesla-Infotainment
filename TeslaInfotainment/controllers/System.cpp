@@ -2,7 +2,7 @@
 
 System::System(QObject *parent)
 	: QObject(parent)
-    , m_carLocked(true)
+    , m_carLocked(false)
     , m_outDoorTemp(25)
     , m_userName("Tesla")
 {}
