@@ -19,10 +19,6 @@ Rectangle {
 		fillMode: Image.PreserveAspectFit
 		width: parent.width * 0.75
 
-	    // Debugging output
-		Component.onCompleted: {
-			console.log("Image source:", source);
-		}
 	}
 
 
