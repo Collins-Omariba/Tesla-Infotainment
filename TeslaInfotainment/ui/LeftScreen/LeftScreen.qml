@@ -1,5 +1,6 @@
 ﻿import QtQuick 2.3
 
+
 Rectangle {
 	id: leftScreen
 
@@ -9,6 +10,22 @@ Rectangle {
 		bottom: bottomBar.top
 		left: parent.left
 	}
-	color: "darkslategrey"
+	
+
+	Image{
+		id: carRender
+		source: "../assets/tesla-cybertruck.jpg"
+		anchors.centerIn: parent
+		fillMode: Image.PreserveAspectFit
+		width: parent.width * 0.75
+
+	    // Debugging output
+		Component.onCompleted: {
+			console.log("Image source:", source);
+		}
+	}
+
+
+
 	width: parent.width * 1/3
 }

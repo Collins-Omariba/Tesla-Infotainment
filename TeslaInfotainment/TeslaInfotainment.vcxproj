@@ -104,6 +104,10 @@
     <QtRcc Include="qml.qrc" />
     <None Include="main.qml" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="ui\assets\tesla-cybertruck.jpg" />
+    <Image Include="ui\LeftScreen\tesla-cybertruck.jpg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
