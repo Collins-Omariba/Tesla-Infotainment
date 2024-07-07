@@ -1,8 +1,8 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
-import "ui/BottomBar"
-import "ui/RightScreen"
-import "ui/LeftScreen"
+import "./ui/BottomBar"
+import "./ui/RightScreen"
+import "./ui/LeftScreen"
 
 Window {
     visible: true

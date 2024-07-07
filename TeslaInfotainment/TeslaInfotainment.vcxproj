@@ -97,7 +97,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="main.cpp" />
     <None Include="ui\BottomBar\BottomBar.qml" />
     <None Include="ui\LeftScreen\LeftScreen.qml" />
     <None Include="ui\RightScreen\RightScreen.qml" />
