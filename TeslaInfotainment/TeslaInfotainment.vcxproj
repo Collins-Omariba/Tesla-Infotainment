@@ -105,8 +105,8 @@
     <None Include="main.qml" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="ui\assets\car-icon.png" />
     <Image Include="ui\assets\tesla-cybertruck.jpg" />
-    <Image Include="ui\LeftScreen\tesla-cybertruck.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
